@@ -1,0 +1,5 @@
+language : c
+script : cd logtool_staticlib_cpp & make all
+compiler :
+    - make
+    - g++
