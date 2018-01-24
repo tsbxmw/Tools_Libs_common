@@ -1,11 +1,9 @@
 #pragma once
-#pragma once
 
 #include <iostream>
 #include "all2string.h"
 
 using namespace std;
-
 
 
 class LogShow {

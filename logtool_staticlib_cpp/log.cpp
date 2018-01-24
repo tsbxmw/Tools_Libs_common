@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "log.h"
 
 void LogShow::logwrite(string name, string logstr)
 {
@@ -18,31 +18,18 @@ void LogShow::logshow(string funcname, int loglevel, string logstr)
 
 std::string LogShow::timeshow()
 {
-    SYSTEMTIME sys;
-    GetLocalTime(&sys);
-    string timenow;
-    if (sys.wMonth < 10)
-        timenow = all2string.Word2String(sys.wYear) + ".0" + all2string.Word2String(sys.wMonth);
-    else
-        timenow = all2string.Word2String(sys.wYear) + "." + all2string.Word2String(sys.wMonth);
-    if (sys.wDay < 10)
-        timenow = timenow + ".0" + all2string.Word2String(sys.wDay) + " ";
-    else
-        timenow = timenow + "." + all2string.Word2String(sys.wDay) + " ";
-    if (sys.wHour < 10)
-        timenow += "0" + all2string.Word2String(sys.wHour) + ":";
-    else
-        timenow += all2string.Word2String(sys.wHour) + ":";
-    if (sys.wMinute < 10)
-        timenow += "0" + all2string.Word2String(sys.wMinute) + ":";
-    else
-        timenow += all2string.Word2String(sys.wMinute) + ":";
-    if (sys.wSecond < 10)
-        timenow += "0" + all2string.Word2String(sys.wSecond);
-    else
-        timenow += all2string.Word2String(sys.wSecond);
-
-
+    time_t tt;
+    time( &tt );
+    tt = tt + 8*3600;  // transform the time zone
+    tm* t= gmtime( &tt );
+    printf("%d-%02d-%02d %02d:%02d:%02d\n",
+           t->tm_year + 1900,
+           t->tm_mon + 1,
+           t->tm_mday,
+           t->tm_hour,
+           t->tm_min,
+           t->tm_sec);
+    string timenow = "";
     return timenow;
 }
 
