@@ -1,4 +1,7 @@
 language : c
-script : cd logtool_staticlib_cpp && make liblog.so
+script : 
+    - cd logtool_staticlib_cpp && make liblog.so
+    - cd all2string_lib_cpp && make a2str.a
+    - cd all2string_lib_cpp && make a2str.so
 compiler :
     - g++
