@@ -1,6 +1,8 @@
 # Tools_Libs_common
 basic tools and libs
 
+[![Build Status](https://travis-ci.org/tsbxmw/Tools_Libs_common.svg?branch=master)](https://travis-ci.org/tsbxmw/Tools_Libs_common)
+
 ## log & all2string lib
 
 * in windows, output a time log is not easy, logtool & all2string would make it easy
