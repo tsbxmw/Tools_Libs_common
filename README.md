@@ -15,6 +15,23 @@ basic tools and libs
 
 ### function
 
+#### timenow()
+
 * string timenow() : to return the time now
+
+    public string timenow()
+    using to return the localtime.
+
+#### logwrite(string logname, string logstr)
+
 * void logwrite(string logname, string logstr) : write the logstr to logname file with time 
+
+    public void logwrite(string logname, string logstr)
+    using to write log strings to file named logname
+
+#### logshow(string funcname, int loglevel, string logstr)
+
 * void logshow(string funcname, int loglevel, string logstr) : show logstr with funcname and time, write it to logname file
+
+    public void logshow(string funcname, int loglevel, string logstr)
+    using to format log output (default write to funcname)
