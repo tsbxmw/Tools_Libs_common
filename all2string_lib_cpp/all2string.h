@@ -12,7 +12,7 @@ public:
     string Int2String(int value);
     string Float2String(float value);
     string Double2String(double value);
-
+    
     template <class T> inline
     string all2string(T t);
 
