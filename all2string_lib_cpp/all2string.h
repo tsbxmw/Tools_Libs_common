@@ -33,7 +33,7 @@ string All2String::all2string(T t)
     return str;
 }
 
-template <class T1, class T2> 
+template <class T1, class T2> inline
 string All2String::all2string(T1 t1, T2 t2)
 {
     return all2string(t1) + " " + all2string(t2 );
